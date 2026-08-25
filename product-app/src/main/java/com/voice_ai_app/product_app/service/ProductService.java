@@ -9,19 +9,18 @@ import com.voice_ai_app.product_app.exception.ProductNotFoundException;
 import com.voice_ai_app.product_app.model.Product;
 import com.voice_ai_app.product_app.repository.ProductRepository;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.List;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
+@Slf4j
 public class ProductService {
 
-    private static final Logger log = LoggerFactory.getLogger(ProductService.class);
-
-    private final ProductRepository productRepository;
-
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+    private final ProductRepository productRepository;   
 
     @Transactional(readOnly = true)
     public List<Product> getAllProducts() {
