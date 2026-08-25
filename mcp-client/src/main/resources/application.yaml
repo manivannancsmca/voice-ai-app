@@ -1,3 +1,30 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: mcp-client
+
+  ai:
+    # Ollama configuration — connects to local Ollama running Llama 3
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3
+        options:
+          temperature: 0.7     # Controls randomness: 0 = deterministic, 1 = creative
+          num-predict: 1024    # Max tokens to generate
+
+    # MCP Client configuration — connects to the MCP Server via SSE
+    mcp:
+      client:
+        sse:
+          connections:
+            product-server:
+              url: http://localhost:8081
+
+logging:
+  level:
+    com.example.mcpclient: DEBUG
+    org.springframework.ai: DEBUG
+    io.modelcontextprotocol: INFO
