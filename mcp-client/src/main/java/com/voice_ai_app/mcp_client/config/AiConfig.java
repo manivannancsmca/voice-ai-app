@@ -3,20 +3,12 @@ package com.voice_ai_app.mcp_client.config;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
-import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AiConfig {
-
-    @Bean
-    public ChatMemory chatMemory() {
-        return MessageWindowChatMemory.builder()
-                .maxMessages(20)
-                .build();
-    }
 
     @Bean
     public ChatClient chatClient(
@@ -40,7 +32,7 @@ public class AiConfig {
                         Format your responses in a clear, readable way.
                         Be concise and friendly.
                         """)
-                .defaultTools(toolCallbackProvider)
+                .defaultToolCallbacks(toolCallbackProvider)
                 .defaultAdvisors(
                         MessageChatMemoryAdvisor.builder(chatMemory).build()
                 )
