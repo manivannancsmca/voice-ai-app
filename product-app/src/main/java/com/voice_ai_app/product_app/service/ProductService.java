@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.voice_ai_app.product_app.exception.ProductNotFoundException;
 import com.voice_ai_app.product_app.model.Product;
 import com.voice_ai_app.product_app.repository.ProductRepository;
 
