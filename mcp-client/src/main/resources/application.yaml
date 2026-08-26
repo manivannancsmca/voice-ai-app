@@ -28,3 +28,4 @@ logging:
     com.example.mcpclient: DEBUG
     org.springframework.ai: DEBUG
     io.modelcontextprotocol: INFO
+    
