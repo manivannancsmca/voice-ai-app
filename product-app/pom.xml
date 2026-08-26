@@ -15,6 +15,7 @@
     <groupId>com.example</groupId>
     <artifactId>product-app</artifactId>
     <version>1.0.0</version>
+	
     <name>Product Application</name>
     <description>Product REST API with MySQL and Flyway</description>
 
