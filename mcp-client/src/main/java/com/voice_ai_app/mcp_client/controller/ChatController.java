@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.voice_ai_app.mcp_client.service.AiChatService;
-
 import java.util.Map;
 
 @RestController
