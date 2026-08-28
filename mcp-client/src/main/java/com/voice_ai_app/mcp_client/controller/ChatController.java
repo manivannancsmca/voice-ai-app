@@ -13,7 +13,6 @@ import java.util.Map;
 public class ChatController {
 
     private static final Logger log = LoggerFactory.getLogger(ChatController.class);
-
     private final AiChatService aiChatService;
 
     public ChatController(AiChatService aiChatService) {
