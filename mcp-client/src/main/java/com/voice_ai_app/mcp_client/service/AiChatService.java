@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
  *   5. Llama 3 generates the final natural language response
  *   6. Response is returned to the caller
  */
-
 @Service
 public class AiChatService {
 
