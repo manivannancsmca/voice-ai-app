@@ -19,7 +19,6 @@ public class AiConfig {
         return builder
                 .defaultSystem("""
                         You are a helpful product store assistant.
-
                         You can help users:
                         - Browse and search for products
                         - Get details about specific products
