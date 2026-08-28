@@ -56,8 +56,6 @@ public class Product {
         updatedAt = LocalDateTime.now();
     }
 
-
-    // Convenience constructor
     public Product(String name, String description, BigDecimal price,
                    String category, Integer stockQuantity) {
         this.name = name;
