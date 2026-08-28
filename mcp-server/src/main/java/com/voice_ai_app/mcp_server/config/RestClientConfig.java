@@ -11,7 +11,7 @@ public class RestClientConfig {
 
     @Bean
     public RestClient productRestClient(
-            @Value("${product-service.base-url}") String baseUrl) {
+        @Value("${product-service.base-url}") String baseUrl) {
 
         // Set connection and read timeouts
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
