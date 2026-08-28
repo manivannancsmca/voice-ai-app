@@ -32,3 +32,4 @@ logging:
     com.example.product: DEBUG
     org.flywaydb: INFO
     org.hibernate.SQL: DEBUG
+    
