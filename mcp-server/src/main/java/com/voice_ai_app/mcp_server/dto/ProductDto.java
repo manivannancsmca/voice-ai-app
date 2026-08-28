@@ -10,4 +10,5 @@ public record ProductDto(
         BigDecimal price,
         String category,
         @JsonProperty("stock_quantity") Integer stockQuantity
+        
 ) {}
