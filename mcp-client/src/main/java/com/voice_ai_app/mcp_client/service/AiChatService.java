@@ -21,7 +21,6 @@ import org.springframework.stereotype.Service;
 public class AiChatService {
 
     private static final Logger log = LoggerFactory.getLogger(AiChatService.class);
-
     private final ChatClient chatClient;
 
     public AiChatService(ChatClient chatClient) {
